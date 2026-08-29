@@ -1,0 +1,19 @@
+site_name: FrogLib Documentation
+theme:
+  name: material
+  palette:
+    primary: green
+    accent: green
+
+nav:
+  - Home: index.md
+  - Core Concepts:
+      - Behavior System: behaviors.md
+      - Nests: nests.md
+  - Hardware & Actuators: actuators.md
+  - Math & Geometry:
+      - Angle API: angle.md
+  - Motion & Kinematics:
+      - Kinematics: kinematics.md
+      - Motion Profiling: motion.md
+  - Examples: examples.md

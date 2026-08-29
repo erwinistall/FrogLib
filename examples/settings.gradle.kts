@@ -9,18 +9,18 @@ pluginManagement {
 
 includeBuild("../core") {
 	dependencySubstitution {
-		substitute(module("org.solverslib:core")).using(project(":"))
+		substitute(module("com.erwinherrera.froglib:core")).using(project(":"))
 	}
 }
 
 includeBuild("../pedroPathing") {
 	dependencySubstitution {
-		substitute(module("org.solverslib:pedroPathing")).using(project(":"))
+		substitute(module("com.erwinherrera.froglib:pedroPathing")).using(project(":"))
 	}
 }
 
 includeBuild("../photon") {
     dependencySubstitution {
-        substitute(module("org.solverslib:photon")).using(project(":"))
+        substitute(module("com.erwinherrera.froglib:photon")).using(project(":"))
     }
 }

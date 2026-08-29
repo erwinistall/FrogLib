@@ -18,6 +18,6 @@ ftc {
 
 // TODO: migrate once photon is published as part of easy auto libraries
 dependencies {
-    implementation("org.solverslib:photon")
+    implementation("org.froglib:photon")
     implementation("com.pedropathing:ftc:2.0.6")
 }

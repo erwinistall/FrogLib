@@ -4,7 +4,7 @@ plugins {
     id("dev.frozenmilk.doc") version "0.0.5"
 }
 
-android.namespace = "org.solverslib.photon"
+android.namespace = "com.erwinherrera.froglib.photon"
 
 dairyPublishing {
     gitDir = file("..")
@@ -29,7 +29,7 @@ ftc {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "org.solverslib"
+            groupId = "com.erwinherrera.froglib"
             artifactId = "photon"
 
             artifact(dairyDoc.dokkaHtmlJar)

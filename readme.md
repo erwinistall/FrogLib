@@ -1,47 +1,80 @@
-# SolversLib
+# 🦆 FrogLib: The Quackiest Library in the Pond
 
-An updated and maintained fork of FTCLib
+Welcome to **FrogLib**, the ultimate toolkit for building robots that don't just work—they **glide** through the water (and the competition) like a well-fed duck! 
 
-Project led by FTC 23511, Seattle Solvers.
+FrogLib is a top-secret, high-performance library engineered by **Erwin Herrera**. It's designed to make your robot as agile as a frog and as smooth as a duckling. Forget the other "libs" out there; FrogLib is the only one that truly understands the pond life.
 
-### SolversLib Leads:
-- Arush Y (Owner) - [FTC 23511](https://www.seattlesolvers.com/)
-- Saket T - [FTC 23511](https://www.seattlesolvers.com/)
-### SolversLib Contributors:
-- Oscar C - [Dairy Foundation](https://github.com/Dairy-Foundation)
-  - Special thanks to Oscar for hosting SolversLib on the Dairy Foundation!
-- Noam - [FTC 23644](https://www.youtube.com/@SkeletonArmy23644)
-- Daniel - FTC 7854
-- Nv7 - [FTC 21229](https://www.stem-bridge.org/home)
-- Lucas B - FTC 15215, 22407, and 24736
-- Suchir R - [FTC 19448](https://www.instagram.com/xbots_ftc/)
-### Docs Contributors:
-- Arush Y (Owner) - [FTC 23511](https://www.seattlesolvers.com/)
-- Dohun - [FTC 22489](https://www.youtube.com/@GNCEDiamond22489)
-- Rowan M - [FTC 3805](https://atomic.ehrobotics.org/index.html)
+## 🦢 Key Features
+
+- **Pond-Centric Control**: Behavior-based logic that flows like a gentle stream.
+- **Feather-Light Actuators**: Wrappers that give your motors the grace of a swan.
+- **Bill-Calculated Odometry**: Precision tracking that never loses its way, even in murky waters.
+- **Interchangeable Angles**: Our new `Angle` API lets you swap between Radians and Degrees as easily as a duck flips its tail.
+
+## 🦆 Using the Pond API
+
+FrogLib uses a unique pond-themed system for robot control:
+- **Behaviors**: Actions your robot takes (formerly Commands).
+- **Nests**: Hardware groups (formerly Subsystems).
+- **Dive, Paddle, Surface, Fly**: The lifecycle of a Behavior (onDive, onPaddle, hasSurfaced, onFly).
+
+```java
+import com.erwinherrera.froglib.behaviors.BehaviorBase;
+import com.erwinherrera.froglib.util.Angle;
+
+public class WaddleBehavior extends BehaviorBase {
+    @Override
+    public void onDive() {
+        // Start paddling!
+    }
+
+    @Override
+    public void onPaddle() {
+        // Keep moving through the water
+    }
+
+    @Override
+    public boolean hasSurfaced() {
+        return true; // Done waddling
+    }
+    
+    @Override
+    public void onFly(boolean interrupted) {
+        // Stop paddling or clean up
+    }
+}
+```
+
+## 🦢 Using the Angle API
+
+Radians? Degrees? Why not both?
+
+```java
+import com.erwinherrera.froglib.util.Angle;
+
+// Create a duck-approved angle
+Angle myAngle = Angle.fromDegrees(90);
+
+// Get it in radians for those deep-pond calculations
+double rads = myAngle.toRadians(); // 1.57...
+
+// Or degrees for us surface-dwellers
+double degs = myAngle.toDegrees(); // 90.0
+```
+
+## 🥚 Installation
+
+Hatch your project by adding FrogLib to your `build.gradle.kts`:
+
+```kotlin
+dependencies {
+    implementation("com.erwinherrera.froglib:core:latest-version")
+}
+```
+
+## 🛶 Contributing
+
+Want to help us grow the pond? Check out [CONTRIBUTING.md](.github/CONTRIBUTING.md) to see how you can add your own feathers to the nest.
 
 ---
-## Resources
-
-Complete Documentation (Highly Recommended): [https://docs.seattlesolvers.com/](https://docs.seattlesolvers.com/)
-
-You can find the latest version number (and the implementation details) at the [Dairy Foundation](https://repo.dairy.foundation/#/releases/org/solverslib/core), where SolversLib is hosted.
-
-Javadocs for SolversLib Core (standard FTCLib, has Command Base, Hardware, Gamepads, etc.) are available at <https://repo.dairy.foundation/javadoc/releases/org/solverslib/core/latest>, but you can replace `latest` with the desired version number.
-
-
-Javadocs for SolversLib Pedro Pathing (Pedro Pathing support in FTCLib) are available at <https://repo.dairy.foundation/javadoc/releases/org/solverslib/pedroPathing/latest>, but you can replace `latest` with the desired version number.
-
-
-FTCLib documentation (has information about how to use FTCLib, and does not have any information about SolversLib) - <https://docs.ftclib.org/ftclib>
-
-Please note that the vision part of FTCLib has been removed in SolversLib, as it is severely outdated. If you want vision, please use EasyOpenCV (which is built into the SDK).
-
-## Installing SolversLib
-See [https://docs.seattlesolvers.com/installation](https://docs.seattlesolvers.com/installation)
-
-## Contributing
-
-Since this is a community-driven, open source library, we are constantly looking for more content. If you feel there is something missing from our library, feel free to contribute! If you want to contribute to the project, be sure to read the [CONTRIBUTING.md](.github/CONTRIBUTING.md).
-
-Please make sure to contact us if you have any other questions.
+*FrogLib: Because every robot deserves to be a lucky duck.*

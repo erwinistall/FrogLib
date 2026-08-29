@@ -9,6 +9,6 @@ pluginManagement {
 
 includeBuild("../core") {
 	dependencySubstitution {
-		substitute(module("org.solverslib:core")).using(project(":"))
+		substitute(module("com.erwinherrera.froglib:core")).using(project(":"))
 	}
 }

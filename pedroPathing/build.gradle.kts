@@ -4,7 +4,7 @@ plugins {
     id("dev.frozenmilk.doc") version "0.0.5"
 }
 
-android.namespace = "org.solverslib.pedroPathing"
+android.namespace = "com.erwinherrera.froglib.pedroPathing"
 
 dairyPublishing {
     gitDir = file("..")
@@ -36,7 +36,7 @@ dependencies {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "org.solverslib"
+            groupId = "com.erwinherrera.froglib"
             artifactId = "pedroPathing"
             // note that version was previously 2.1.1
 
